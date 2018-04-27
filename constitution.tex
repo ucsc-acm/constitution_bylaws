@@ -1,0 +1,46 @@
+\documentclass[11pt]{report}
+\usepackage{fullpage}
+\usepackage{array}
+\makeatletter
+\renewcommand{\chapter}{\@startsection{chapter}{1}{0mm}{\baselineskip}{0.5\baselineskip}{\centering\sc\large}}
+\makeatother
+\newcommand{\mychapter}[2]{
+	\setcounter{chapter}{#1}
+	\setcounter{section}{0}
+	\chapter*{#2}
+	\addcontentsline{toc}{chapter}{#2}
+}
+
+\title{Constitution}
+\author{Student Chapter of the Association for Computing Machinery at University of California, Santa Cruz}
+\date{Ratified April 2018}
+
+% Title page
+\begin{document}
+\maketitle
+
+% Dates and descriptions of amendments
+\noindent
+As amended by this Constitution:
+
+\begin{tabular}{l}
+	\\
+\end{tabular}
+
+\noindent
+
+\newpage
+
+\tableofcontents
+\newpage
+
+\input{constitution_articles/01_name_and_purposes}
+\input{constitution_articles/02_membership}
+\input{constitution_articles/03_directors}
+\input{constitution_articles/04_public_representations_and_relations}
+\input{constitution_articles/05_elections_and_voting_procedures}
+\input{constitution_articles/06_amendments}
+\input{constitution_articles/07_dissolution_of_the_chapter}
+
+
+\end{document}
